@@ -1,5 +1,5 @@
 {
-  "name": "site-oliver",
+  "name": "site-Oliveira",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -47,6 +47,7 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.0",
     "react-swipeable-views": "^0.14.0",
+    "react-youtube": "^10.1.0",
     "recharts": "^2.1.8",
     "redux-persist": "^6.0.0",
     "sha256": "^0.2.0",
