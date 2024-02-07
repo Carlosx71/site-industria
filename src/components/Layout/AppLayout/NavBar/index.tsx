@@ -12,15 +12,16 @@ import {
   Hidden,
   Link,
   Stack,
+  Avatar,
 } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
-import logotipo from 'assets/images/logotipo.jpg';
+import logotipo from 'assets/images/logotipo.png';
 import useStyles from './styles';
 
 const pages = [
-  { title: 'Quem Somos', anchor: 'descriptionLawyer' },
-  { title: 'Áreas de Atuação', anchor: 'areasOfExpertise' },
-  { title: 'Escritório', anchor: 'descriptionOffice' },
+  { title: 'Sobre Nós', anchor: 'descriptionLawyer' },
+  { title: 'Serviços', anchor: 'areasOfExpertise' },
+  { title: 'Missão', anchor: 'descriptionOffice' },
   { title: 'Contato', anchor: 'contato' },
 ];
 
@@ -47,24 +48,21 @@ const ResponsiveAppBar = () => {
         position="absolute"
         sx={{
           borderRadius: '10px',
-          //margin: '0 100px',
           marginTop: '100px',
           right: 'auto',
-          // marginRight: '100px',
           width: '80%',
-          // padding: '0 100px',
+          padding: '15px',
         }}
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Hidden mdUp>
-              <Box sx={{ mr: 1 }}>
-                <img
-                  src={logotipo}
-                  className={classes.logResponsive}
-                  alt="logo Oliveira"
-                />
-              </Box>
+              <Avatar
+                alt="Oliver"
+                src={logotipo}
+                variant="square"
+                sx={{ width: 160, display: 'flex', alignSelf: 'center' }}
+              />
             </Hidden>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -118,8 +116,18 @@ const ResponsiveAppBar = () => {
               sx={{ width: '100%' }}
             >
               <Hidden mdDown>
-                <Box sx={{ my: 2 }}>Oliveira Logo</Box>
-                {/* <img src={logotipo} className={classes.logo} alt="logo Oliveira" /> */}
+                <Avatar
+                  alt="Oliver"
+                  src={logotipo}
+                  variant="square"
+                  sx={{ width: 160, display: 'flex', alignSelf: 'center' }}
+                />
+                {/* <Box sx={{ my: 2 }}>Oliver Logo</Box> */}
+                {/* <img
+                  src={logotipo}
+                  className={classes.logo}
+                  alt="logo Oliver"
+                /> */}
               </Hidden>
               <Hidden mdDown>
                 <Box display="flex">
@@ -129,7 +137,8 @@ const ResponsiveAppBar = () => {
                       onClick={handleCloseNavMenu}
                       sx={{
                         my: 2,
-                        color: 'white',
+
+                        fontWeight: 'bold',
                         // display: 'block'
                       }}
                       href={`#${anchor}`}

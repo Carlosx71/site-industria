@@ -26,7 +26,7 @@ const ImgHeader = () => {
               animationOutDuration={1000}
               isVisible
             >
-              <div className={classes.internalCard}>Oliveira</div>
+              <div className={classes.internalCard}>Oliver</div>
             </Animated>
           </Grid>
           {/* <Grid item>

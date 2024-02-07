@@ -52,7 +52,7 @@ const AboutCompany = () => {
         </Grid>
         <Grid item xs={12}>
           <Description>
-            Somos a Oliveira, uma empresa especializada na produção e
+            Somos a Oliver, uma empresa especializada na produção e
             comercialização de celulose. Com mais de 20 anos de experiência no
             mercado, nos orgulhamos de oferecer produtos de alta qualidade e
             sustentáveis, atendendo às demandas de diversos setores, como papel,
@@ -65,14 +65,14 @@ const AboutCompany = () => {
             mercado, sendo reconhecidos pela confiabilidade e eficiência em
             todas as nossas operações. Além disso, estamos em constante busca
             por melhorias e novas soluções para atender às necessidades de um
-            mercado em constante evolução. Na Oliveira, valorizamos a
+            mercado em constante evolução. Na Oliver, valorizamos a
             transparência, a ética e o comprometimento com nossos colaboradores,
             clientes, fornecedores e comunidade. Estamos empenhados em
             contribuir para o desenvolvimento sustentável e para a construção de
             um futuro mais próspero e consciente. Junte-se a nós e conheça a
             excelência da celulose produzida com responsabilidade e compromisso.
-            Na Oliveira, estamos prontos para atender suas demandas e superar
-            suas expectativas.
+            Na Oliver, estamos prontos para atender suas demandas e superar suas
+            expectativas.
           </Description>
         </Grid>
       </Grid>

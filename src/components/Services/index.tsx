@@ -37,11 +37,13 @@ const avatarCssRules: SxProps<Theme> = {
 
 const spaceItensPaper = 4;
 
+const paperElevation = 4;
+
 const Services = () => {
   return (
     <Grid container justifyContent="center" spacing={6}>
       <Grid item lg={2}>
-        <Paper elevation={3} sx={paperCssRules}>
+        <Paper elevation={paperElevation} sx={paperCssRules}>
           <Grid
             container
             direction="column"
@@ -62,7 +64,7 @@ const Services = () => {
         </Paper>
       </Grid>
       <Grid item lg={2}>
-        <Paper elevation={3} sx={paperCssRules}>
+        <Paper elevation={paperElevation} sx={paperCssRules}>
           <Grid
             container
             direction="column"
@@ -83,7 +85,7 @@ const Services = () => {
         </Paper>
       </Grid>
       <Grid item lg={2}>
-        <Paper elevation={3} sx={paperCssRules}>
+        <Paper elevation={paperElevation} sx={paperCssRules}>
           <Grid
             container
             direction="column"
@@ -104,7 +106,7 @@ const Services = () => {
         </Paper>
       </Grid>
       <Grid item lg={2}>
-        <Paper elevation={3} sx={paperCssRules}>
+        <Paper elevation={paperElevation} sx={paperCssRules}>
           <Grid
             container
             direction="column"
@@ -125,7 +127,7 @@ const Services = () => {
         </Paper>
       </Grid>
       <Grid item lg={2}>
-        <Paper elevation={3} sx={paperCssRules}>
+        <Paper elevation={paperElevation} sx={paperCssRules}>
           <Grid
             container
             direction="column"
@@ -146,7 +148,7 @@ const Services = () => {
         </Paper>
       </Grid>
       <Grid item lg={2}>
-        <Paper elevation={3} sx={paperCssRules}>
+        <Paper elevation={paperElevation} sx={paperCssRules}>
           <Grid
             container
             direction="column"

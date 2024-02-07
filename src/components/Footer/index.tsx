@@ -1,22 +1,16 @@
 import React from 'react';
-import { Typography, Link, Grid, Stack } from '@mui/material';
-import { WhatsApp, Instagram, Email } from '@mui/icons-material';
+import { Typography, Link, Grid, Stack, Box } from '@mui/material';
+import { WhatsApp, Instagram, Email, Place } from '@mui/icons-material';
 import useStyles from './styles';
 
 const Copyright = () => {
   return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      sx={{ color: 'white' }}
-    >
-      {'Copyright © '}
-      <Link color="inherit" href="https://www.augustoteixeira.adv.br/">
+    <Typography variant="subtitle1" color="white" align="center">
+      Copyright ©
+      <Link color="inherit" href="">
         Todos Direitos Reservados
       </Link>{' '}
       {new Date().getFullYear()}
-      {'.'}
     </Typography>
   );
 };
@@ -24,95 +18,72 @@ const Copyright = () => {
 const Footer = () => {
   const classes = useStyles();
   return (
-    <Grid
-      container
-      direction="column"
+    <Box
       sx={{
+        padding: '50px',
         backgroundColor: (theme) => {
           return theme.palette.primary.main;
         },
+        justifyContent: 'center',
       }}
     >
-      <Grid item>
-        <Grid container justifyContent="center">
-          <Grid item>
-            <br />
-            <Typography
-              variant="h6"
-              align="center"
-              gutterBottom
-              className={classes.colorText}
-            >
-              AUGUSTO TEIXEIRA
+      <Grid container justifyContent="center" spacing={2}>
+        <Grid item xs={12} md={6} lg={6} xl={6}>
+          <Box
+            display="flex"
+            sx={{ justifyContent: { xs: 'center', lg: 'flex-end' } }}
+            marginRight="10px"
+          >
+            <WhatsApp color="secondary" sx={{ marginRight: '5px' }} />
+            <Typography variant="subtitle1" color="white">
+              (99) 99999-9999
             </Typography>
-          </Grid>
+          </Box>
         </Grid>
-      </Grid>
-      <Grid item>
-        <Grid container justifyContent="center" spacing={2}>
-          <Grid item>
-            <Stack spacing={2}>
-              <Typography
-                variant="subtitle1"
-                align="center"
-                color="text.secondary"
-                component="p"
+        <Grid item xs={12} md={6} lg={6} xl={6}>
+          <Box display="flex">
+            <Instagram color="secondary" sx={{ marginRight: '5px' }} />
+            <Link href="" className={classes.link}>
+              <Box
+                sx={{
+                  color: 'white',
+                  textDecoration: 'none',
+                  width: '173px',
+                }}
               >
-                <div className={classes.colorText}>
-                  Advocacia & Consultoria Jurídica
-                </div>
-              </Typography>
-              <Copyright />
-            </Stack>
-          </Grid>
-          <Grid item>
-            <Stack spacing={2}>
-              <Stack direction="row" spacing={1}>
-                <WhatsApp color="secondary" />
-                <Typography
-                  variant="subtitle1"
-                  color="text.secondary"
-                  component="p"
-                >
-                  <div className={classes.colorText}>(31) 99716-4619</div>
-                </Typography>
-                <Instagram color="secondary" />
-                <Typography
-                  variant="subtitle1"
-                  color="text.secondary"
-                  component="p"
-                  className={classes.colorText}
-                >
-                  <Link
-                    href="https://www.instagram.com/adv.augustoteixeira/"
-                    className={classes.link}
-                  >
-                    <div className={classes.colorText}>
-                      @adv.augustoteixeira
-                    </div>
-                  </Link>
-                </Typography>
-              </Stack>
-              <Stack direction="row" spacing={1}>
-                <Email color="secondary" />
-                <Typography
-                  variant="subtitle1"
-                  // align="center"
-                  color="text.secondary"
-                  component="p"
-                >
-                  <div className={classes.colorText}>
-                    adv.augustoteixeira@gmail.com
-                  </div>
-                </Typography>
-              </Stack>
-            </Stack>
-            <br />
-          </Grid>
+                inserir link do instagram
+              </Box>
+            </Link>
+          </Box>
         </Grid>
       </Grid>
-      <Grid item></Grid>
-    </Grid>
+      <Grid
+        container
+        justifyContent="center"
+        spacing={2}
+        sx={{ marginTop: '5px' }}
+      >
+        <Grid item md={6} lg={6} xl={6}>
+          <Stack direction="row" spacing={1} justifyContent="flex-end">
+            <Email color="secondary" />
+            <Typography variant="subtitle1" color="white">
+              email@email.com
+            </Typography>
+          </Stack>
+        </Grid>
+        <Grid item md={6} lg={6} xl={6}>
+          <Stack direction="row" spacing={1}>
+            <Place color="secondary" />
+            <Typography variant="subtitle1" color="white">
+              Endereço
+            </Typography>
+          </Stack>
+        </Grid>
+      </Grid>
+      <Stack marginTop="30px">
+        <Copyright />
+      </Stack>
+    </Box>
   );
 };
 

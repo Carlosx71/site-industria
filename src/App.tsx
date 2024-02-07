@@ -4,7 +4,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { ThemeProvider } from '@mui/material/styles';
-import { Box, Container, Grid } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import ptBR from 'date-fns/locale/pt-BR';
@@ -13,74 +13,21 @@ import Layout from 'components/Layout';
 import LineBar from 'components/LineBar';
 import ImgHeader from 'components/ImgHeader';
 import AboutCompany from 'components/AboutCompany';
-import AreasOfExpertise from 'components/AreasOfExpertise';
 import DescriptionOffice from 'components/DescriptionOffice';
 import FormEmail from 'components/FormEmail';
 import Footer from 'components/Footer';
-import YouTube, { YouTubeProps } from 'react-youtube';
 import Services from 'components/Services';
+import VideoBackground from 'components/VideoBackground';
+import VideoCarousel from 'components/VideoCarousel';
+import MissionAndVision from 'components/MissionAndVision';
 
-const VideoBackground = () => {
-  const videoId = 'J-7My6CXWP4';
-  const opts: YouTubeProps['opts'] = {
-    height: '100%',
-    width: '100%',
-    playerVars: {
-      autoplay: 1,
-      controls: 0,
-      loop: 1,
-      playlist: videoId, // use the same videoId for the playlist
-      mute: 1,
-      showinfo: 0,
-      modestbranding: 1,
-      rel: 0,
-    },
-  };
-
-  return (
-    <Box
-      sx={{
-        position: 'relative',
-        width: '100%',
-        height: '100vh',
-        '@media (min-width: 2000px)': {
-          height: '97.4vh',
-        },
-      }}
-    >
-      <YouTube
-        videoId={videoId}
-        style={{
-          height: '100vh',
-          width: '100%',
-          transform: 'scale(1.1)',
-          position: 'absolute',
-          bottom: '50px',
-        }}
-        opts={opts}
-      />
-
-      <Box
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100vh',
-          backgroundColor: 'rgba(102, 102, 102, 0.5)',
-        }}
-      />
-    </Box>
-  );
-};
 const spacing = 2;
 const App = () => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns} locale={ptBR}>
       <ThemeProvider theme={theme}>
         <Layout />
-        {/* <LineBar /> */}
-        <Grid container>
+        <Grid container spacing={spacing}>
           <Grid item md={12} sx={{ display: { xs: 'none', lg: 'inline' } }}>
             <VideoBackground />
           </Grid>
@@ -100,6 +47,35 @@ const App = () => {
             >
               <Services />
             </Container>
+          </Grid>
+          <Grid item xs={12} xl={12}>
+            <Container maxWidth="xl">
+              <VideoCarousel />
+            </Container>
+          </Grid>
+          <Grid item xs={12} xl={12}>
+            <Container maxWidth="xl">d</Container>
+          </Grid>
+          <Grid item xs={12} xl={12}>
+            <Container maxWidth="xl">
+              <MissionAndVision />
+            </Container>
+          </Grid>
+          {/* PEDIR PARA FAZEREM UM CHAVE NO GOOGLE */}
+          {/* <Grid item xs={12} xl={12}>
+            <Container maxWidth="xl">
+              <iframe
+                title="Endereço do escritório"
+                width="600"
+                height="450"
+                style={{ border: 0 }}
+                loading="lazy"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBEavNN4lyWkNnsj3y3Tj0bG1AChZzw1pg&q=Space+Needle,Seattle+WA"
+              ></iframe>
+            </Container>
+          </Grid> */}
+          <Grid item xs={12}>
+            <Footer />
           </Grid>
         </Grid>
         {/* <Grid container>

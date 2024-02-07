@@ -1,5 +1,8 @@
 import { createTheme } from '@mui/material/styles';
 
+const colorBase = '#003756';
+const colorSecondary = '#cccccc';
+
 const theme = createTheme({
   typography: {
     fontFamily: 'Montserrat, sans-serif',
@@ -7,14 +10,19 @@ const theme = createTheme({
   },
   components: {
     MuiCardContent: {
-      styleOverrides: { root: { border: '1px solid #333333' } },
+      styleOverrides: { root: { border: `1px solid ${colorBase}` } },
     },
-    MuiIconButton: { styleOverrides: { root: { color: '#333333' } } },
-    MuiIcon: { styleOverrides: { colorPrimary: '#333333' } },
+    MuiIconButton: { styleOverrides: { root: { color: colorBase } } },
+    MuiIcon: { styleOverrides: { colorPrimary: colorBase } },
+    MuiButton: {
+      styleOverrides: {
+        root: { color: colorSecondary, backgroundColor: colorBase },
+      },
+    },
   },
   palette: {
-    primary: { main: '#333333' },
-    secondary: { main: '#666666' },
+    primary: { main: colorBase },
+    secondary: { main: colorSecondary },
     mode: 'light',
   },
 });

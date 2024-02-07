@@ -10,7 +10,6 @@ const Description = ({ children, sx }: DescriptionProps) => {
   return (
     <Box
       sx={{
-        ...sx,
         // fontFamily:
         //   '"IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
         // fontSize: '1rem',
@@ -22,6 +21,7 @@ const Description = ({ children, sx }: DescriptionProps) => {
         textAlign: 'center',
         paddingLeft: '10px',
         paddingRight: '10px',
+        ...sx,
       }}
     >
       {children}
