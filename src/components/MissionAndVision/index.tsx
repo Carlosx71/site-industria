@@ -18,7 +18,7 @@ const MissionAndVision = () => {
               fontWeight="500"
               sx={{ lineHeight: '1.22222' }}
             >
-              Visão
+              VISÃO
             </Typography>
           </Grid>
           <Grid item>
