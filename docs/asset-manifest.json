@@ -1,7 +1,12 @@
 {
   "files": {
+<<<<<<< HEAD:build/asset-manifest.json
     "main.css": "/site-industria/static/css/main.3cc5eb70.css",
     "main.js": "/site-industria/static/js/main.a7ae4a49.js",
+=======
+    "main.css": "/site-industria/static/css/main.bffc4f54.css",
+    "main.js": "/site-industria/static/js/main.582699a5.js",
+>>>>>>> 94acbed (test):docs/asset-manifest.json
     "static/media/imgHeader.jpg": "/site-industria/static/media/imgHeader.8a6b080881aae55410c2.jpg",
     "static/media/usinaBandeirante.png": "/site-industria/static/media/usinaBandeirante.9c5dae045f10614f77d1.png",
     "static/media/grupoFarias.png": "/site-industria/static/media/grupoFarias.4416ab6ae962abb8c5ce.png",
@@ -49,11 +54,20 @@
     "static/media/roboto-greek-ext-300-normal.woff2": "/site-industria/static/media/roboto-greek-ext-300-normal.04e05839d6a35e046c13.woff2",
     "static/media/roboto-greek-ext-700-normal.woff2": "/site-industria/static/media/roboto-greek-ext-700-normal.9674bc0ae12c2551d9d1.woff2",
     "index.html": "/site-industria/index.html",
+<<<<<<< HEAD:build/asset-manifest.json
     "main.3cc5eb70.css.map": "/site-industria/static/css/main.3cc5eb70.css.map",
     "main.a7ae4a49.js.map": "/site-industria/static/js/main.a7ae4a49.js.map"
   },
   "entrypoints": [
     "static/css/main.3cc5eb70.css",
     "static/js/main.a7ae4a49.js"
+=======
+    "main.bffc4f54.css.map": "/site-industria/static/css/main.bffc4f54.css.map",
+    "main.582699a5.js.map": "/site-industria/static/js/main.582699a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bffc4f54.css",
+    "static/js/main.582699a5.js"
+>>>>>>> 94acbed (test):docs/asset-manifest.json
   ]
 }
