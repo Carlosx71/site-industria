@@ -3,8 +3,7 @@ import React from 'react';
 import Description from 'components/Description';
 
 const MissionAndVision = () => {
-  const paperElevation = 4;
-  const spacing = 2;
+  const spacing = 4;
   return (
     <Grid container spacing={spacing}>
       <Grid item xs={12} lg={6}>
@@ -12,13 +11,13 @@ const MissionAndVision = () => {
         <Grid container direction="column" spacing={spacing}>
           <Grid item>
             <Typography
-              variant="h4"
+              variant="h3"
               color="primary"
               textAlign="center"
               fontWeight="500"
               sx={{ lineHeight: '1.22222' }}
             >
-              VISÃO
+              Visão
             </Typography>
           </Grid>
           <Grid item>
@@ -45,7 +44,7 @@ const MissionAndVision = () => {
         <Grid container direction="column" spacing={spacing}>
           <Grid item>
             <Typography
-              variant="h4"
+              variant="h3"
               color="primary"
               textAlign="center"
               fontWeight="500"

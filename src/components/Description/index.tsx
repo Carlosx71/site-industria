@@ -10,15 +10,11 @@ const Description = ({ children, sx }: DescriptionProps) => {
   return (
     <Box
       sx={{
-        // fontFamily:
-        //   '"IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-        // fontSize: '1rem',
         fontWeight: 400,
         wordBreak: 'break-word',
-        //maxWidth: '900px',
         color: 'rgba(0, 0, 0, 0.6)',
         lineHeight: '1.43',
-        textAlign: 'center',
+        textAlign: 'justify',
         paddingLeft: '10px',
         paddingRight: '10px',
         ...sx,

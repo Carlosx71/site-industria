@@ -4,7 +4,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { ThemeProvider } from '@mui/material/styles';
-import { Container, Grid } from '@mui/material';
+import { Box, Container, Grid } from '@mui/material';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import ptBR from 'date-fns/locale/pt-BR';
@@ -20,8 +20,10 @@ import Services from 'components/Services';
 import VideoBackground from 'components/VideoBackground';
 import VideoCarousel from 'components/VideoCarousel';
 import MissionAndVision from 'components/MissionAndVision';
+import Partners from 'components/Partner';
+import Contact from 'components/Contact';
 
-const spacing = 2;
+const spacing = 5;
 const App = () => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns} locale={ptBR}>
@@ -54,26 +56,20 @@ const App = () => {
             </Container>
           </Grid>
           <Grid item xs={12} xl={12}>
-            <Container maxWidth="xl">d</Container>
-          </Grid>
-          <Grid item xs={12} xl={12}>
             <Container maxWidth="xl">
               <MissionAndVision />
             </Container>
           </Grid>
-          {/* PEDIR PARA FAZEREM UM CHAVE NO GOOGLE */}
-          {/* <Grid item xs={12} xl={12}>
+          <Grid item xs={12} marginTop={'20px'}>
             <Container maxWidth="xl">
-              <iframe
-                title="Endereço do escritório"
-                width="600"
-                height="450"
-                style={{ border: 0 }}
-                loading="lazy"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBEavNN4lyWkNnsj3y3Tj0bG1AChZzw1pg&q=Space+Needle,Seattle+WA"
-              ></iframe>
+              <Partners />
             </Container>
-          </Grid> */}
+          </Grid>
+          <Grid item xs={12}>
+            <Container maxWidth="xl">
+              <Contact />
+            </Container>
+          </Grid>
           <Grid item xs={12}>
             <Footer />
           </Grid>

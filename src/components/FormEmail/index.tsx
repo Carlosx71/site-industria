@@ -6,6 +6,9 @@ import {
   Button,
   Backdrop,
   CircularProgress,
+  Typography,
+  SxProps,
+  Theme,
 } from '@mui/material';
 import { contact } from 'interfaces/contact';
 import { useFormik } from 'formik';
@@ -69,6 +72,14 @@ const FormEmail = () => {
     };
   }, []);
 
+  const ruleTextFiled: SxProps<Theme> = {
+    '& .MuiFormLabel-root': {
+      color: (theme) => theme.palette.primary.main,
+    },
+    '& .Mui-focused .MuiFormLabel-root': {
+      color: (theme) => theme.palette.primary.main,
+    },
+  };
   return (
     <form
       onSubmit={async (event) => {
@@ -76,7 +87,6 @@ const FormEmail = () => {
         handleEmail(event);
         formik.handleSubmit(event);
       }}
-      style={{ marginTop: '100px', marginBottom: '100px' }}
     >
       <Grid container direction="column" spacing={2}>
         <Grid item>
@@ -84,9 +94,15 @@ const FormEmail = () => {
             in={scrollPosition >= 600}
             {...(scrollPosition >= 600 ? { timeout: 800 } : {})}
           >
-            <div className={classes.title} color="primary">
-              Contato
-            </div>
+            <Typography
+              variant="h3"
+              color="primary"
+              textAlign="center"
+              fontWeight="700"
+              sx={{ lineHeight: '1.22222' }}
+            >
+              CONTATO
+            </Typography>
           </Fade>
           <br />
         </Grid>
@@ -98,6 +114,7 @@ const FormEmail = () => {
             <CircularProgress color="primary" />
           </Backdrop>
           <TextField
+            sx={ruleTextFiled}
             required
             id="nome"
             name="nome"
@@ -115,6 +132,7 @@ const FormEmail = () => {
           <Grid container spacing={2}>
             <Grid item xs={12} lg={6}>
               <TextField
+                sx={ruleTextFiled}
                 required
                 id="email"
                 name="email"
@@ -130,6 +148,7 @@ const FormEmail = () => {
             </Grid>
             <Grid item xs={12} lg={6}>
               <TextField
+                sx={ruleTextFiled}
                 required
                 id="telefone"
                 name="telefone"
@@ -149,6 +168,7 @@ const FormEmail = () => {
         </Grid>
         <Grid item xs={12}>
           <TextField
+            sx={ruleTextFiled}
             required
             id="assunto"
             name="assunto"
@@ -164,6 +184,7 @@ const FormEmail = () => {
         </Grid>
         <Grid item xs={12}>
           <TextField
+            sx={ruleTextFiled}
             required
             id="mensagem"
             name="mensagem"

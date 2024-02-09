@@ -67,7 +67,7 @@ const Footer = () => {
           <Stack direction="row" spacing={1} justifyContent="flex-end">
             <Email color="secondary" />
             <Typography variant="subtitle1" color="white">
-              email@email.com
+              contato@oliverservicos.com
             </Typography>
           </Stack>
         </Grid>
