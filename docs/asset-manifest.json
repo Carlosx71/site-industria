@@ -5,15 +5,21 @@
     "main.js": "/site-industria/static/js/main.a7ae4a49.js",
 =======
     "main.css": "/site-industria/static/css/main.bffc4f54.css",
+<<<<<<< HEAD
     "main.js": "/site-industria/static/js/main.582699a5.js",
 >>>>>>> 94acbed (test):docs/asset-manifest.json
     "static/media/imgHeader.jpg": "/site-industria/static/media/imgHeader.8a6b080881aae55410c2.jpg",
     "static/media/usinaBandeirante.png": "/site-industria/static/media/usinaBandeirante.9c5dae045f10614f77d1.png",
     "static/media/grupoFarias.png": "/site-industria/static/media/grupoFarias.4416ab6ae962abb8c5ce.png",
+=======
+    "main.js": "/site-industria/static/js/main.9b12ece6.js",
+    "static/media/imgHeader.jpg": "/site-industria/static/media/imgHeader.8a6b080881aae55410c2.jpg",
+>>>>>>> 024fcdd (remane to docs)
     "static/media/roboto-all-500-normal.woff": "/site-industria/static/media/roboto-all-500-normal.52cb737b682eb9661ee1.woff",
     "static/media/roboto-all-700-normal.woff": "/site-industria/static/media/roboto-all-700-normal.ef6d1d09b20b877fee4e.woff",
     "static/media/roboto-all-400-normal.woff": "/site-industria/static/media/roboto-all-400-normal.376ea5d93f71583052f6.woff",
     "static/media/roboto-all-300-normal.woff": "/site-industria/static/media/roboto-all-300-normal.8fc5f5f22c9951113696.woff",
+<<<<<<< HEAD
     "static/media/logotipo-granelli-vertical.png": "/site-industria/static/media/logotipo-granelli-vertical.5b199005193b03da0935.png",
     "static/media/citrosuco.png": "/site-industria/static/media/citrosuco.88eeb37cdbf43e3ee33d.png",
     "static/media/logotipoLight.png": "/site-industria/static/media/logotipoLight.47556a765ebbcadfadaa.png",
@@ -22,6 +28,10 @@
     "static/media/saoManoel.jpg": "/site-industria/static/media/saoManoel.cae14cd783de6c79dcf7.jpg",
     "static/media/furlan.png": "/site-industria/static/media/furlan.8804f4710f790b7a373f.png",
     "static/media/salmeron.png": "/site-industria/static/media/salmeron.7728a9f2ed989090cfbe.png",
+=======
+    "static/media/logotipo.png": "/site-industria/static/media/logotipo.f7a9d93522410b0863bf.png",
+    "static/media/teste.png": "/site-industria/static/media/teste.ada8e3463f709c7207f8.png",
+>>>>>>> 024fcdd (remane to docs)
     "static/media/roboto-latin-500-normal.woff2": "/site-industria/static/media/roboto-latin-500-normal.869888415d0b1a99ae5c.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/site-industria/static/media/roboto-latin-700-normal.0682ca7f74351d42bf73.woff2",
     "static/media/roboto-latin-300-normal.woff2": "/site-industria/static/media/roboto-latin-300-normal.0109a2ace896a506a0aa.woff2",
@@ -63,11 +73,15 @@
     "static/js/main.a7ae4a49.js"
 =======
     "main.bffc4f54.css.map": "/site-industria/static/css/main.bffc4f54.css.map",
-    "main.582699a5.js.map": "/site-industria/static/js/main.582699a5.js.map"
+    "main.9b12ece6.js.map": "/site-industria/static/js/main.9b12ece6.js.map"
   },
   "entrypoints": [
     "static/css/main.bffc4f54.css",
+<<<<<<< HEAD
     "static/js/main.582699a5.js"
 >>>>>>> 94acbed (test):docs/asset-manifest.json
+=======
+    "static/js/main.9b12ece6.js"
+>>>>>>> 024fcdd (remane to docs)
   ]
 }
