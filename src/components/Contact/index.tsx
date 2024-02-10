@@ -5,11 +5,11 @@ import React from 'react';
 const Contact = () => {
   return (
     <Grid container spacing={4} justifyContent="center">
-      <Grid item xs={12} md={12}>
+      <Grid item xs={12} md={6}>
         <iframe
           title="Endereço do escritório"
           width="100%"
-          height="300px"
+          height="100%"
           style={{ border: 0, borderRadius: '10px' }}
           loading="lazy"
           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBEavNN4lyWkNnsj3y3Tj0bG1AChZzw1pg&q=Space+Needle,Seattle+WA"

@@ -52,6 +52,7 @@ const ResponsiveAppBar = () => {
           right: 'auto',
           width: '80%',
           padding: '15px',
+          bgcolor: '#fff',
         }}
       >
         <Container maxWidth="xl">
@@ -120,14 +121,13 @@ const ResponsiveAppBar = () => {
                   alt="Oliver"
                   src={logotipo}
                   variant="square"
-                  sx={{ width: 160, display: 'flex', alignSelf: 'center' }}
+                  sx={{
+                    width: 160,
+                    height: '100%',
+                    display: 'flex',
+                    alignSelf: 'center',
+                  }}
                 />
-                {/* <Box sx={{ my: 2 }}>Oliver Logo</Box> */}
-                {/* <img
-                  src={logotipo}
-                  className={classes.logo}
-                  alt="logo Oliver"
-                /> */}
               </Hidden>
               <Hidden mdDown>
                 <Box display="flex">
@@ -137,9 +137,8 @@ const ResponsiveAppBar = () => {
                       onClick={handleCloseNavMenu}
                       sx={{
                         my: 2,
-
+                        bgcolor: '#fff',
                         fontWeight: 'bold',
-                        // display: 'block'
                       }}
                       href={`#${anchor}`}
                     >

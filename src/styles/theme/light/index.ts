@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
 const colorBase = '#003756';
-const colorSecondary = '#cccccc';
+const colorSecondary = '#666666';
 
 const theme = createTheme({
   typography: {

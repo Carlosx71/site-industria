@@ -1,11 +1,17 @@
 import React from 'react';
 import { Typography, Link, Grid, Stack, Box } from '@mui/material';
-import { WhatsApp, Instagram, Email, Place } from '@mui/icons-material';
+import {
+  WhatsApp,
+  Instagram,
+  Email,
+  Place,
+  LinkedIn,
+} from '@mui/icons-material';
 import useStyles from './styles';
 
 const Copyright = () => {
   return (
-    <Typography variant="subtitle1" color="white" align="center">
+    <Typography variant="subtitle1" color="white">
       Copyright ©
       <Link color="inherit" href="">
         Todos Direitos Reservados
@@ -18,72 +24,158 @@ const Copyright = () => {
 const Footer = () => {
   const classes = useStyles();
   return (
-    <Box
+    <Grid
+      container
       sx={{
-        padding: '50px',
         backgroundColor: (theme) => {
           return theme.palette.primary.main;
         },
-        justifyContent: 'center',
       }}
+      padding="50px"
+      spacing={2}
     >
-      <Grid container justifyContent="center" spacing={2}>
-        <Grid item xs={12} md={6} lg={6} xl={6}>
-          <Box
-            display="flex"
-            sx={{ justifyContent: { xs: 'center', lg: 'flex-end' } }}
-            marginRight="10px"
-          >
-            <WhatsApp color="secondary" sx={{ marginRight: '5px' }} />
-            <Typography variant="subtitle1" color="white">
-              (99) 99999-9999
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} md={6} lg={6} xl={6}>
-          <Box display="flex">
-            <Instagram color="secondary" sx={{ marginRight: '5px' }} />
-            <Link href="" className={classes.link}>
-              <Box
-                sx={{
-                  color: 'white',
-                  textDecoration: 'none',
-                  width: '173px',
-                }}
-              >
-                inserir link do instagram
+      <Grid item xs={12} md={6}>
+        <Grid container spacing={4} justifyContent="center">
+          <Grid item xs={12} md={4}>
+            <Stack spacing={1} width="100%">
+              <Box display="flex" alignItems="center">
+                <Typography
+                  variant="subtitle1"
+                  color="text.secondary"
+                  component="p"
+                >
+                  <div className={classes.colorText}>
+                    Instalações industriais
+                  </div>
+                </Typography>
               </Box>
-            </Link>
-          </Box>
+              <Box display="flex" alignItems="center">
+                <Typography
+                  variant="subtitle1"
+                  // align="center"
+                  color="text.secondary"
+                  component="p"
+                >
+                  <div
+                    className={classes.colorText}
+                    style={{ minWidth: '323px' }}
+                  >
+                    <Copyright />
+                  </div>
+                </Typography>
+              </Box>
+            </Stack>
+          </Grid>
         </Grid>
       </Grid>
-      <Grid
-        container
-        justifyContent="center"
-        spacing={2}
-        sx={{ marginTop: '5px' }}
-      >
-        <Grid item md={6} lg={6} xl={6}>
-          <Stack direction="row" spacing={1} justifyContent="flex-end">
-            <Email color="secondary" />
-            <Typography variant="subtitle1" color="white">
-              contato@oliverservicos.com
-            </Typography>
-          </Stack>
-        </Grid>
-        <Grid item md={6} lg={6} xl={6}>
-          <Stack direction="row" spacing={1}>
-            <Place color="secondary" />
-            <Typography variant="subtitle1" color="white">
-              Endereço
-            </Typography>
-          </Stack>
+
+      <Grid item xs={12} md={6}>
+        <Grid container spacing={4} justifyContent="center">
+          <Grid item xs={12} md={4}>
+            <Stack spacing={1} width="100%">
+              <Box display="flex" alignItems="center">
+                <WhatsApp color="secondary" sx={{ marginRight: '10px' }} />
+                <Typography
+                  variant="subtitle1"
+                  color="text.secondary"
+                  component="p"
+                >
+                  <div className={classes.colorText}>(99) 99999-9999</div>
+                </Typography>
+              </Box>
+              <Box display="flex" alignItems="center">
+                <Email color="secondary" sx={{ marginRight: '10px' }} />
+                <Typography
+                  variant="subtitle1"
+                  // align="center"
+                  color="text.secondary"
+                  component="p"
+                >
+                  <div className={classes.colorText}>
+                    contato@oliverservicos.com
+                  </div>
+                </Typography>
+              </Box>
+            </Stack>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Stack spacing={1} width="100%">
+              <Box display="flex" alignItems="center">
+                <Instagram color="secondary" sx={{ marginRight: '10px' }} />
+                <Typography
+                  variant="subtitle1"
+                  color="text.secondary"
+                  component="p"
+                  className={classes.colorText}
+                >
+                  <Link
+                    href="https://www.instagram.com/oliver.instalacoesindustriais/"
+                    className={classes.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className={classes.colorText}>
+                      @oliver.instalacoesindustriais
+                    </div>
+                  </Link>
+                </Typography>
+              </Box>
+              <Box display="flex" alignItems="center">
+                <LinkedIn color="secondary" sx={{ marginRight: '10px' }} />
+                <Typography
+                  variant="subtitle1"
+                  color="text.secondary"
+                  component="p"
+                  className={classes.colorText}
+                >
+                  <Link
+                    href="https://www.linkedin.com/company/oliver-instala%C3%A7%C3%B5es-industriais/about/"
+                    className={classes.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className={classes.colorText}>
+                      oliver-instalações-industriais
+                    </div>
+                  </Link>
+                </Typography>
+              </Box>
+            </Stack>
+          </Grid>
         </Grid>
       </Grid>
-      <Stack marginTop="30px">
-        <Copyright />
-      </Stack>
-    </Box>
+      {/* <Grid item xs={12} md={4}>
+        <Grid container direction="column" spacing={1} alignItems="center">
+          <Grid item>
+            <Stack spacing={1} width="100%">
+              <Box display="flex" alignItems="center">
+                <WhatsApp color="secondary" sx={{ marginRight: '10px' }} />
+                <Typography
+                  variant="subtitle1"
+                  color="text.secondary"
+                  component="p"
+                >
+                  <div className={classes.colorText}>(31) 99716-4619</div>
+                </Typography>
+              </Box>
+              <Box display="flex" alignItems="center">
+                <Email color="secondary" sx={{ marginRight: '10px' }} />
+                <Typography
+                  variant="subtitle1"
+                  // align="center"
+                  color="text.secondary"
+                  component="p"
+                >
+                  <div className={classes.colorText}>
+                    contato@oliverservicos.com
+                  </div>
+                </Typography>
+              </Box>
+            </Stack>
+          </Grid>
+        </Grid>
+      </Grid> */}
+    </Grid>
   );
 };
 

@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme: Theme) => {
     logResponsive: { width: '40%' },
     menu: {
       '& .MuiPaper-root': {
-        backgroundColor: theme.palette.primary.main,
+        //backgroundColor: theme.palette.primary.main,
+        backgroundColor: '#fff',
       },
     },
     link: {
