@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) => {
       textDecoration: 'none',
     },
     linkText: {
-      color: 'white',
+      color: 'rgb(0, 51, 102)',
     },
   };
 });

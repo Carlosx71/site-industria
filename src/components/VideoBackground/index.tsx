@@ -48,7 +48,7 @@ const VideoBackground = () => {
           left: 0,
           width: '100%',
           height: '100vh',
-          backgroundColor: 'rgba(0, 55, 86, 0.4)',
+          backgroundColor: 'rgba(0, 51, 102,0.4)',
         }}
       />
     </Box>

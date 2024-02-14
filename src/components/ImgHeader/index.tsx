@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Grid, Link } from '@mui/material';
 import useStyles from './styles';
-import Line from 'components/Lines';
 import { Animated } from 'react-animated-css';
 import { WhatsApp } from '@mui/icons-material';
 import { Box } from '@mui/system';
@@ -19,7 +18,7 @@ const ImgHeader = () => {
           justifyItems="center"
         >
           <Grid item>
-            <Animated
+            {/* <Animated
               animationIn="fadeIn"
               animationOut="zoomOutDown"
               animationInDuration={3000}
@@ -27,34 +26,17 @@ const ImgHeader = () => {
               isVisible
             >
               <div className={classes.internalCard}>Oliver</div>
-            </Animated>
+            </Animated> */}
           </Grid>
-          {/* <Grid item>
-            <Grid container>
-              <Animated
-                animationIn="bounceIn"
-                animationOut="zoomOutDown"
-                animationInDuration={1000}
-                animationOutDuration={1000}
-                isVisible
-              >
-                <Line />
-              </Animated>
-            </Grid>
-          </Grid> */}
-          {/* <Grid item>
-            <div className={classes.subTitle}>
-              Advocacia & Consultoria Jurídica
-            </div>
-          </Grid> */}
           <Grid item>
             <Button
               variant="contained"
-              color="secondary"
               startIcon={
-                <WhatsApp style={{ color: '#FFF', fontSize: '30px' }} />
+                <WhatsApp
+                  style={{ color: 'rgb(0, 51, 102)', fontSize: '30px' }}
+                />
               }
-              sx={{ marginTop: '50px' }}
+              sx={{ bgcolor: '#FFF', marginTop: '50px' }}
               size="large"
               component={Link}
               target="_blank"
@@ -63,7 +45,7 @@ const ImgHeader = () => {
             >
               <Box
                 sx={{
-                  color: '#FFF',
+                  color: 'rgb(0, 51, 102)',
                 }}
               >
                 Entrar em contato

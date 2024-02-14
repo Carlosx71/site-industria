@@ -33,7 +33,6 @@ const App = () => {
           <Grid item md={12} sx={{ display: { xs: 'none', lg: 'inline' } }}>
             <VideoBackground />
           </Grid>
-
           <Grid item xs={12} sx={{ display: { xs: 'inline', lg: 'none' } }}>
             <ImgHeader />
           </Grid>

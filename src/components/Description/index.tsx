@@ -2,7 +2,7 @@ import { Box, SxProps, Theme } from '@mui/material';
 import React from 'react';
 
 interface DescriptionProps {
-  children: string;
+  children: React.ReactNode;
   sx?: SxProps<Theme>;
 }
 
@@ -12,7 +12,7 @@ const Description = ({ children, sx }: DescriptionProps) => {
       sx={{
         fontWeight: 400,
         wordBreak: 'break-word',
-        color: 'rgba(0, 0, 0, 0.6)',
+        color: 'RGB(77, 77, 77)',
         lineHeight: '1.43',
         textAlign: 'justify',
         paddingLeft: '10px',

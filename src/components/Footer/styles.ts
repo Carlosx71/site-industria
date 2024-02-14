@@ -4,10 +4,10 @@ import { Theme } from '@mui/material/styles';
 const useStyles = makeStyles((theme: Theme) => {
   return {
     colorText: {
-      color: 'white',
+      color: 'rgb(0, 51, 102)',
     },
     link: {
-      color: 'white',
+      color: 'rgb(0, 51, 102)',
       textDecoration: 'none',
     },
   };

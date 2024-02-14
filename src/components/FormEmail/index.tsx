@@ -15,11 +15,9 @@ import { contact } from 'interfaces/contact';
 import { useFormik } from 'formik';
 import emailjs from 'emailjs-com';
 import validationSchema from './validationSchema';
-import useStyles from './styles';
 import { maskCellPhone } from 'utils/string/maks';
 
 const FormEmail = () => {
-  const classes = useStyles();
   const [scrollPosition, setScrollPosition] = useState(0);
   const [open, setOpen] = React.useState(false);
   const handleBackDrop = () => {
@@ -75,10 +73,10 @@ const FormEmail = () => {
 
   const ruleTextFiled: SxProps<Theme> = {
     '& .MuiFormLabel-root': {
-      color: (theme) => theme.palette.primary.main,
+      color: 'rgb(0, 51, 102)',
     },
     '& .Mui-focused .MuiFormLabel-root': {
-      color: (theme) => theme.palette.primary.main,
+      color: 'rgb(0, 51, 102)',
     },
   };
   return (
@@ -98,7 +96,7 @@ const FormEmail = () => {
             >
               <Typography
                 variant="h3"
-                color="primary"
+                color="rgb(0, 51, 102)"
                 textAlign="center"
                 fontWeight="500"
                 sx={{ lineHeight: '1.22222' }}
@@ -109,7 +107,10 @@ const FormEmail = () => {
           </Grid>
           <Grid item xs={12}>
             <Backdrop
-              sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+              sx={{
+                color: 'rgb(0, 51, 102)',
+                zIndex: (theme) => theme.zIndex.drawer + 1,
+              }}
               open={open}
             >
               <CircularProgress color="primary" />
@@ -205,7 +206,7 @@ const FormEmail = () => {
             <Button
               variant="contained"
               type="submit"
-              sx={{ color: 'white' }}
+              sx={{ color: 'white', backgroundColor: 'rgb(0, 51, 102)' }}
               fullWidth
             >
               Enviar

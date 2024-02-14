@@ -42,37 +42,37 @@ const AboutCompany = () => {
         <Grid item xs={12}>
           <Typography
             variant="h5"
-            color="primary"
+            color="rgb(0, 51, 102)"
             textAlign="center"
             fontWeight="700"
             sx={{ fontSize: '3.25rem', lineHeight: '1.22222' }}
           >
-            Sobre nós
+            QUEM SOMOS
           </Typography>
         </Grid>
         <Grid item xs={12}>
           <Description>
-            Somos a Oliver, uma empresa especializada na produção e
-            comercialização de celulose. Com mais de 20 anos de experiência no
-            mercado, nos orgulhamos de oferecer produtos de alta qualidade e
-            sustentáveis, atendendo às demandas de diversos setores, como papel,
-            embalagens, têxtil e muitos outros. Nossa missão é fornecer celulose
-            de forma responsável, respeitando o meio ambiente e promovendo
-            práticas sustentáveis em todas as etapas do processo produtivo.
-            Buscamos constantemente inovação e tecnologia de ponta para garantir
-            a excelência em nossos produtos e serviços. Nosso compromisso com a
-            qualidade e a satisfação dos clientes nos coloca como referência no
-            mercado, sendo reconhecidos pela confiabilidade e eficiência em
-            todas as nossas operações. Além disso, estamos em constante busca
-            por melhorias e novas soluções para atender às necessidades de um
-            mercado em constante evolução. Na Oliver, valorizamos a
-            transparência, a ética e o comprometimento com nossos colaboradores,
-            clientes, fornecedores e comunidade. Estamos empenhados em
-            contribuir para o desenvolvimento sustentável e para a construção de
-            um futuro mais próspero e consciente. Junte-se a nós e conheça a
-            excelência da celulose produzida com responsabilidade e compromisso.
-            Na Oliver, estamos prontos para atender suas demandas e superar suas
-            expectativas.
+            <p>
+              Prestadora de serviços voltada para o setor industrial, contando
+              com uma equipe experiente e consolidada. Nosso foco está na
+              montagem e desmontagem de estruturas, tubulações e caldeirarias de
+              projetos industriais.
+            </p>
+            <p>
+              Acreditamos profundamente no estabelecimento de relacionamentos
+              duradouros com nossos clientes. Buscamos sempre uma parceria
+              sólida, oferecendo um atendimento rápido, direto e personalizado
+              para cada empresa que atendemos. Essa abordagem nos permite ser
+              privilegiados na obtenção de serviços de alta qualidade.
+            </p>
+            <p>
+              Iniciamos nossa trajetória em 2018 e estamos comprometidos em
+              superar as expectativas e impulsionar o sucesso dos
+              empreendimentos industriais de nossos clientes. Na OLIVER, cada
+              projeto é conduzido com confiança, orgulho e segurança, refletindo
+              nosso compromisso inabalável com a excelência em
+              tudo o que fazemos.
+            </p>
           </Description>
         </Grid>
       </Grid>

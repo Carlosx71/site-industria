@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) => {
       backgroundSize: 'cover',
     },
     layer: {
-      backgroundColor: 'rgba(177, 156, 117, 0.5)',
+      backgroundColor: 'rgba(0, 51, 102,0.4)',
       position: 'absolute',
       top: 0,
       left: 0,
