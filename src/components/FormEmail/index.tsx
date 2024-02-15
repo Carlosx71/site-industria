@@ -33,14 +33,14 @@ const FormEmail = () => {
 
   const handleEmail = async (event: React.FormEvent<HTMLFormElement>) => {
     const response = await emailjs.sendForm(
-      'service_bme6izc',
-      'template_8difsg6',
+      'service_iqw5q0o',
+      'template_p60go5h',
       event.currentTarget,
-      'bwAviBJ8vc-YpUSY5'
+      'JpNn_D2Xh-5ZIKaca'
     );
     formik.setValues(initialValues);
     formik.setTouched({});
-    console.log(response);
+
     if (response.status === 200) {
       setOpen(false);
     } else {
