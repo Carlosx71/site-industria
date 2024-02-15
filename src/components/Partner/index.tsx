@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Avatar, Paper, SxProps, Theme } from '@mui/material';
+import { Avatar, Box, Paper, SxProps, Theme } from '@mui/material';
 import Carousel, { ResponsiveType } from 'react-multi-carousel';
 import raizen from 'assets/images/partners/raizen.png';
 import atvos from 'assets/images/partners/atvos.jpeg';
@@ -46,11 +46,11 @@ const Partners = () => {
   const elevation = 7;
 
   return (
-    <>
+    <Box id="partners">
       <Carousel
         additionalTransfrom={0}
         arrows
-        //autoPlay
+        autoPlay
         autoPlaySpeed={3000}
         centerMode={false}
         className=""
@@ -201,7 +201,7 @@ const Partners = () => {
           />
         </Paper>
       </Carousel>
-    </>
+    </Box>
   );
 };
 

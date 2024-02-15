@@ -10,7 +10,7 @@ const VideoBackground = () => {
       autoplay: 1,
       controls: 0,
       loop: 1,
-      playlist: videoId, // use the same videoId for the playlist
+      playlist: videoId,
       mute: 1,
       showinfo: 0,
       modestbranding: 1,

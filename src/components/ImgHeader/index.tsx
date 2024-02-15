@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Grid, Link } from '@mui/material';
 import useStyles from './styles';
-import { Animated } from 'react-animated-css';
 import { WhatsApp } from '@mui/icons-material';
 import { Box } from '@mui/system';
 
@@ -17,17 +16,7 @@ const ImgHeader = () => {
           alignItems="center"
           justifyItems="center"
         >
-          <Grid item>
-            {/* <Animated
-              animationIn="fadeIn"
-              animationOut="zoomOutDown"
-              animationInDuration={3000}
-              animationOutDuration={1000}
-              isVisible
-            >
-              <div className={classes.internalCard}>Oliver</div>
-            </Animated> */}
-          </Grid>
+          <Grid item></Grid>
           <Grid item>
             <Button
               variant="contained"
@@ -41,7 +30,7 @@ const ImgHeader = () => {
               component={Link}
               target="_blank"
               rel="noreferrer"
-              //href="https://api.whatsapp.com/send?phone=5531997164619&text=Olá! Gostária de um orçamento!"
+              href="https://api.whatsapp.com/send?phone=5519996226991&text=Olá! Gostária de um orçamento!"
             >
               <Box
                 sx={{

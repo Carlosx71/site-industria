@@ -12,7 +12,7 @@ const Description = ({ children, sx }: DescriptionProps) => {
       sx={{
         fontWeight: 400,
         wordBreak: 'break-word',
-        color: 'RGB(77, 77, 77)',
+        color: 'rgb(77, 77, 77)',
         lineHeight: '1.43',
         textAlign: 'justify',
         paddingLeft: '10px',

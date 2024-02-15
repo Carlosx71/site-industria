@@ -20,6 +20,11 @@ const theme = createTheme({
         root: { color: colorSecondary, backgroundColor: colorBase },
       },
     },
+    MuiPaper: {
+      styleOverrides: {
+        root: { boxShadow: '0 3px 5px 2px rgba(0, 51, 102, .4)' },
+      },
+    },
   },
   palette: {
     primary: { main: colorBase },
@@ -27,5 +32,4 @@ const theme = createTheme({
     mode: 'light',
   },
 });
-
 export default theme;

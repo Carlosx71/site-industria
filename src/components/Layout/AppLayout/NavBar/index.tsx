@@ -15,15 +15,15 @@ import {
   Avatar,
 } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
-import logotipo from 'assets/images/logotipo.png';
+import logotipo from 'assets/images/logotipoLight.png';
 import useStyles from './styles';
 
 const pages = [
-  { title: 'Quem Somos', anchor: 'descriptionLawyer' },
-  { title: 'Serviços', anchor: 'areasOfExpertise' },
-  { title: 'Missão', anchor: 'descriptionOffice' },
-  { title: 'Parceiros', anchor: 'descriptionOffice' },
-  { title: 'Contato', anchor: 'contato' },
+  { title: 'Quem Somos', anchor: 'aboutCompany' },
+  { title: 'Serviços', anchor: 'services' },
+  { title: 'Propósito', anchor: 'purpose' },
+  { title: 'Parceiros', anchor: 'partners' },
+  { title: 'Contato', anchor: 'contact' },
 ];
 
 const ResponsiveAppBar = () => {
@@ -58,42 +58,6 @@ const ResponsiveAppBar = () => {
         }}
       >
         <Container maxWidth="xl">
-          {/* <Grid container justifyContent="flex-end" spacing={2}>
-            <Grid item>
-              <Link
-                href="https://www.instagram.com/oliver.instalacoesindustriais/"
-                className={classes.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Stack direction="row" spacing={1}>
-                  <WhatsApp sx={{ color: 'rgb(0, 51, 102)' }} />
-                  <Typography variant="subtitle1" component="p">
-                    <Typography color="rgb(0, 51, 102)">
-                      (99) 99999-9999
-                    </Typography>
-                  </Typography>
-                </Stack>
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link
-                href="https://www.instagram.com/oliver.instalacoesindustriais/"
-                className={classes.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Stack direction="row" spacing={1}>
-                  <Email sx={{ color: 'rgb(0, 51, 102)' }} />
-                  <Typography variant="subtitle1" component="p">
-                    <Typography color="rgb(0, 51, 102)">
-                      contato@oliverservicos.com
-                    </Typography>
-                  </Typography>
-                </Stack>
-              </Link>
-            </Grid>
-          </Grid> */}
           <Toolbar disableGutters>
             <Hidden mdUp>
               <Stack

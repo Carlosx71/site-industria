@@ -1,11 +1,11 @@
-import { Grid, Paper, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import Description from 'components/Description';
 
 const MissionAndVision = () => {
   const spacing = 4;
   return (
-    <Grid container spacing={spacing}>
+    <Grid container spacing={spacing} id="purpose">
       <Grid item xs={12} lg={6}>
         <Grid container direction="column" spacing={spacing}>
           <Grid item>
@@ -14,7 +14,10 @@ const MissionAndVision = () => {
               color="rgb(0, 51, 102)"
               textAlign="center"
               fontWeight="500"
-              sx={{ lineHeight: '1.22222' }}
+              sx={{
+                fontSize: { xs: '2rem', md: '3rem' },
+                lineHeight: '1.22222',
+              }}
             >
               Visão
             </Typography>
@@ -41,7 +44,10 @@ const MissionAndVision = () => {
               color="rgb(0, 51, 102)"
               textAlign="center"
               fontWeight="500"
-              sx={{ lineHeight: '1.22222' }}
+              sx={{
+                fontSize: { xs: '2rem', md: '3rem' },
+                lineHeight: '1.22222',
+              }}
             >
               Missão
             </Typography>

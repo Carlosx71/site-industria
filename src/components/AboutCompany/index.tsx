@@ -1,36 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { Avatar, Box, Grid, Typography } from '@mui/material';
-import { Animated } from 'react-animated-css';
-import useStyles from './styles';
-import profile from 'assets/images/imgHeader4.jpg';
+import React from 'react';
+import { Box, Grid, Typography } from '@mui/material';
+
 import Description from 'components/Description';
 
 const AboutCompany = () => {
-  const classes = useStyles();
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  // const handleScroll = () => {
-  //   const position = window.pageYOffset;
-  //   setScrollPosition(position);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll, { passive: true });
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
   return (
     <Box
+      id="aboutCompany"
       sx={{
         marginTop: '30px',
         '@media (min-width: 2000px)': {
           marginTop: '80px',
         },
       }}
-      id="descriptionLawyer"
     >
       <Grid
         container
@@ -45,7 +27,10 @@ const AboutCompany = () => {
             color="rgb(0, 51, 102)"
             textAlign="center"
             fontWeight="700"
-            sx={{ fontSize: '3.25rem', lineHeight: '1.22222' }}
+            sx={{
+              fontSize: { xs: '2rem', lg: '3.25rem' },
+              lineHeight: '1.22222',
+            }}
           >
             QUEM SOMOS
           </Typography>
@@ -68,10 +53,11 @@ const AboutCompany = () => {
             <p>
               Iniciamos nossa trajetória em 2018 e estamos comprometidos em
               superar as expectativas e impulsionar o sucesso dos
-              empreendimentos industriais de nossos clientes. Na OLIVER, cada
-              projeto é conduzido com confiança, orgulho e segurança, refletindo
-              nosso compromisso inabalável com a excelência em
-              tudo o que fazemos.
+              empreendimentos industriais de nossos clientes.
+              <br />
+              Na OLIVER, cada projeto é conduzido com confiança, orgulho e
+              segurança, refletindo nosso compromisso inabalável com a
+              excelência em tudo o que fazemos.
             </p>
           </Description>
         </Grid>
