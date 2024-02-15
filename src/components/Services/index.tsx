@@ -324,7 +324,7 @@ const Services = () => {
                       <Description
                         sx={{ textAlign: 'center', fontWeight: '700' }}
                       >
-                        Caldeira
+                        Caldeiraria
                       </Description>
                       <Fade in={isHoveredGroup.boiler} timeout={500}>
                         <Box sx={boxCssRules}>
