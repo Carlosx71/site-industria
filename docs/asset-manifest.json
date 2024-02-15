@@ -9,11 +9,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "main.js": "/site-industria/static/js/main.582699a5.js",
 >>>>>>> 94acbed (test):docs/asset-manifest.json
 =======
     "main.js": "/site-industria/static/js/main.86d1cc66.js",
 >>>>>>> ef190aa (build)
+=======
+    "main.js": "/site-industria/static/js/main.a7ae4a49.js",
+>>>>>>> 92cee77 (fix build)
     "static/media/imgHeader.jpg": "/site-industria/static/media/imgHeader.8a6b080881aae55410c2.jpg",
     "static/media/usinaBandeirante.png": "/site-industria/static/media/usinaBandeirante.9c5dae045f10614f77d1.png",
     "static/media/grupoFarias.png": "/site-industria/static/media/grupoFarias.4416ab6ae962abb8c5ce.png",
@@ -101,10 +105,11 @@
     "static/js/main.a7ae4a49.js"
 =======
     "main.bffc4f54.css.map": "/site-industria/static/css/main.bffc4f54.css.map",
-    "main.86d1cc66.js.map": "/site-industria/static/js/main.86d1cc66.js.map"
+    "main.a7ae4a49.js.map": "/site-industria/static/js/main.a7ae4a49.js.map"
   },
   "entrypoints": [
     "static/css/main.bffc4f54.css",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,5 +128,8 @@
 =======
     "static/js/main.86d1cc66.js"
 >>>>>>> ef190aa (build)
+=======
+    "static/js/main.a7ae4a49.js"
+>>>>>>> 92cee77 (fix build)
   ]
 }
