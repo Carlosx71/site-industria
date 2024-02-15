@@ -7,6 +7,7 @@
     "main.css": "/site-industria/static/css/main.bffc4f54.css",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "main.js": "/site-industria/static/js/main.582699a5.js",
 >>>>>>> 94acbed (test):docs/asset-manifest.json
     "static/media/imgHeader.jpg": "/site-industria/static/media/imgHeader.8a6b080881aae55410c2.jpg",
@@ -18,6 +19,9 @@
 >>>>>>> 024fcdd (remane to docs)
 =======
     "main.js": "/site-industria/static/js/main.6d33ed39.js",
+=======
+    "main.js": "/site-industria/static/js/main.c81bfca3.js",
+>>>>>>> f8783ec (build)
     "static/media/imgHeader.jpg": "/site-industria/static/media/imgHeader.8a6b080881aae55410c2.jpg",
     "static/media/usinaBandeirante.png": "/site-industria/static/media/usinaBandeirante.9c5dae045f10614f77d1.png",
     "static/media/grupoFarias.png": "/site-industria/static/media/grupoFarias.4416ab6ae962abb8c5ce.png",
@@ -34,8 +38,12 @@
 =======
     "static/media/logotipo-granelli-vertical.png": "/site-industria/static/media/logotipo-granelli-vertical.5b199005193b03da0935.png",
     "static/media/citrosuco.png": "/site-industria/static/media/citrosuco.88eeb37cdbf43e3ee33d.png",
+<<<<<<< HEAD
     "static/media/logotipo.png": "/site-industria/static/media/logotipo.47556a765ebbcadfadaa.png",
 >>>>>>> 895f0f5 (build)
+=======
+    "static/media/logotipoLight.png": "/site-industria/static/media/logotipoLight.47556a765ebbcadfadaa.png",
+>>>>>>> f8783ec (build)
     "static/media/iplan.png": "/site-industria/static/media/iplan.baeaa6459aebb756192f.png",
     "static/media/raizen.png": "/site-industria/static/media/raizen.06c09996e55e4673b5fd.png",
     "static/media/saoManoel.jpg": "/site-industria/static/media/saoManoel.cae14cd783de6c79dcf7.jpg",
@@ -89,10 +97,11 @@
     "static/js/main.a7ae4a49.js"
 =======
     "main.bffc4f54.css.map": "/site-industria/static/css/main.bffc4f54.css.map",
-    "main.6d33ed39.js.map": "/site-industria/static/js/main.6d33ed39.js.map"
+    "main.c81bfca3.js.map": "/site-industria/static/js/main.c81bfca3.js.map"
   },
   "entrypoints": [
     "static/css/main.bffc4f54.css",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "static/js/main.582699a5.js"
@@ -103,5 +112,8 @@
 =======
     "static/js/main.6d33ed39.js"
 >>>>>>> 895f0f5 (build)
+=======
+    "static/js/main.c81bfca3.js"
+>>>>>>> f8783ec (build)
   ]
 }
