@@ -1,23 +1,8 @@
 import { Box } from '@mui/material';
-import YouTube, { YouTubeProps } from 'react-youtube';
+
+import industria from 'assets/videos/industria.mp4';
 
 const VideoBackground = () => {
-  const videoId = 'J-7My6CXWP4';
-  const opts: YouTubeProps['opts'] = {
-    height: '100%',
-    width: '100%',
-    playerVars: {
-      autoplay: 1,
-      controls: 0,
-      loop: 1,
-      playlist: videoId,
-      mute: 1,
-      showinfo: 0,
-      modestbranding: 1,
-      rel: 0,
-    },
-  };
-
   return (
     <Box
       sx={{
@@ -29,8 +14,7 @@ const VideoBackground = () => {
         },
       }}
     >
-      <YouTube
-        videoId={videoId}
+      <video
         style={{
           height: '100vh',
           width: '100%',
@@ -38,7 +22,10 @@ const VideoBackground = () => {
           position: 'absolute',
           bottom: '50px',
         }}
-        opts={opts}
+        autoPlay
+        loop
+        muted
+        src={industria}
       />
 
       <Box

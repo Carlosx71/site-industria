@@ -1,59 +1,24 @@
 import {
   Avatar,
   Box,
-  Fade,
+  Collapse,
   Grid,
-  Grow,
   Paper,
   Stack,
   SxProps,
   Theme,
 } from '@mui/material';
-import {
-  Engineering,
-  PrecisionManufacturing,
-  Construction,
-  FilterAlt,
-  LocalFireDepartment,
-  Settings,
-} from '@mui/icons-material';
+import { Engineering, FilterAlt } from '@mui/icons-material';
 import Description from 'components/Description';
 import React, { useEffect, useState } from 'react';
 
-const DescriptionService = ({ text }: { text: string }) => {
-  return (
-    <Box
-      sx={{
-        fontWeight: 400,
-        wordBreak: 'break-word',
-        color: 'rgb(77, 77, 77)',
-        lineHeight: '1.43',
-        textAlign: 'center',
-        paddingLeft: '10px',
-        paddingRight: '10px',
-      }}
-    >
-      {text}
-    </Box>
-  );
-};
-
 const Services = () => {
-  const initialStateHover = {
-    filter: false,
-    metal: false,
-    welding: false,
-    boiler: false,
-    labor: false,
-    engineering: false,
-  };
-
-  const [isHoveredGroup, setIsHoveredGroup] = useState(initialStateHover);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const avatarCssRules: SxProps<Theme> = {
     height: '100px',
     width: '100px',
+    bgcolor: 'rgb(0,51,102)',
   };
 
   const iconCssRules: SxProps<Theme> = {
@@ -62,27 +27,10 @@ const Services = () => {
   };
 
   const paperCssRules: SxProps<Theme> = {
-    height: '230px',
-    width: '250px',
+    width: '100%',
+    height: '100%',
     padding: '20px',
-    transition: 'height 0.5s ease-in-out ',
-    '&:hover': {
-      transition: 'height 0.5s ease-in-out ',
-      height: '350px',
-    },
   };
-
-  const boxCssRules: SxProps<Theme> = {
-    fontWeight: 400,
-    wordBreak: 'break-word',
-    color: 'rgb(77, 77, 77)',
-    lineHeight: '1.43',
-    textAlign: 'center',
-    paddingLeft: '10px',
-    paddingRight: '10px',
-  };
-
-  const spaceItensPaper = 4;
 
   const paperElevation = 4;
 
@@ -102,360 +50,140 @@ const Services = () => {
 
   return (
     <>
-      <Grid
-        container
-        justifyContent="center"
-        spacing={8}
-        sx={{ marginBottom: '120px' }}
-        id="services"
-      >
-        <Grid item md={4} lg={2}>
-          <Grow
-            in={scrollPosition >= 700}
-            {...(scrollPosition >= 700 ? { timeout: 1400 } : {})}
+      <Grid container spacing={3} sx={{ marginBottom: '120px' }} id="services">
+        <Grid item xs={12} lg={6}>
+          <Paper
+            elevation={paperElevation}
+            sx={{
+              ...paperCssRules,
+            }}
           >
-            <Box>
-              <Paper
-                elevation={paperElevation}
-                sx={paperCssRules}
-                onMouseEnter={() =>
-                  setIsHoveredGroup({ ...isHoveredGroup, filter: true })
-                }
-                onMouseLeave={() => setIsHoveredGroup(initialStateHover)}
-              >
-                <Grid
-                  container
-                  direction="column"
-                  justifyContent="center"
-                  alignItems="center"
+            <Grid container alignItems="center" justifyContent="center">
+              <Grid item xs={12} md={6}>
+                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <Avatar
+                    sx={{
+                      ...avatarCssRules,
+                    }}
+                  >
+                    <Engineering
+                      sx={{
+                        ...iconCssRules,
+                      }}
+                    />
+                  </Avatar>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Stack
+                  spacing={2}
+                  sx={{
+                    height: '100%',
+                    marginTop: { xs: '20px', md: 0 },
+                  }}
                 >
-                  <Grid item xs={12}>
-                    <Stack alignItems="center" spacing={spaceItensPaper}>
-                      <Avatar
-                        variant="circular"
-                        sx={{
-                          ...avatarCssRules,
-                          bgcolor: isHoveredGroup.filter
-                            ? 'white'
-                            : 'rgb(0,51,102)',
-                        }}
-                      >
-                        <FilterAlt
-                          sx={{
-                            ...iconCssRules,
-                            color: isHoveredGroup.filter
-                              ? 'rgb(0,51,102)'
-                              : 'white',
-                          }}
-                        />
-                      </Avatar>
-                      <Description
-                        sx={{ textAlign: 'center', fontWeight: '700' }}
-                      >
-                        Filtros Rotativos Separação de Sólidos
-                      </Description>
-                      <Fade in={isHoveredGroup.filter} timeout={500}>
-                        <Box sx={boxCssRules}>
-                          <DescriptionService text="Fabricação, Manutenção, Venda e Compra." />
-                        </Box>
-                      </Fade>
-                    </Stack>
-                  </Grid>
-                </Grid>
-              </Paper>
-            </Box>
-          </Grow>
+                  <Description
+                    sx={{
+                      fontWeight: '700',
+                      textAlign: { xs: 'center', md: 'start' },
+                    }}
+                  >
+                    Projetos de Engenharia
+                  </Description>
+                  <Description>
+                    <Collapse in={scrollPosition > 1000} timeout={1000}>
+                      <ul>
+                        {[
+                          'Caldeiraria',
+                          'Usinagem',
+                          'Soldagem (Eletrodo Revestido, TIG, MIG/MAG, Arame Tubular, Arco Submerso) Jateamento',
+                          'Pintura Industrial',
+                          'Montagem Industrial',
+                          'Manutenção Industrial',
+                          'Assistência Técnica',
+                          'Testes em Campo',
+                          'Treinamentos.',
+                        ].map((item, index) => {
+                          return (
+                            <li key={index}>
+                              <Box>{item.trim()}</Box>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </Collapse>
+                  </Description>
+                </Stack>
+              </Grid>
+            </Grid>
+          </Paper>
         </Grid>
-        <Grid item md={4} lg={2}>
-          <Grow
-            in={scrollPosition >= 700}
-            {...(scrollPosition >= 700 ? { timeout: 1400 } : {})}
+
+        <Grid item xs={12} lg={6}>
+          <Paper
+            elevation={paperElevation}
+            sx={{
+              ...paperCssRules,
+            }}
           >
-            <Box>
-              <Paper
-                elevation={paperElevation}
-                sx={paperCssRules}
-                onMouseEnter={() =>
-                  setIsHoveredGroup({ ...isHoveredGroup, metal: true })
-                }
-                onMouseLeave={() => setIsHoveredGroup(initialStateHover)}
-              >
-                <Grid
-                  container
-                  direction="column"
-                  justifyContent="center"
-                  alignItems="center"
+            <Grid
+              container
+              alignItems="center"
+              justifyContent="center"
+              sx={{ height: '100%' }}
+            >
+              <Grid item xs={12} md={6}>
+                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <Avatar
+                    sx={{
+                      ...avatarCssRules,
+                    }}
+                  >
+                    <FilterAlt
+                      sx={{
+                        ...iconCssRules,
+                      }}
+                    />
+                  </Avatar>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={6} sx={{ height: '100%' }}>
+                <Stack
+                  spacing={2}
+                  sx={{ height: '100%', marginTop: { xs: '20px', md: 0 } }}
                 >
-                  <Grid item xs={12}>
-                    <Stack alignItems="center" spacing={spaceItensPaper}>
-                      <Avatar
-                        sx={{
-                          ...avatarCssRules,
-                          bgcolor: isHoveredGroup.metal
-                            ? 'white'
-                            : 'rgb(0,51,102)',
-                        }}
-                      >
-                        <Settings
-                          sx={{
-                            ...iconCssRules,
-                            color: isHoveredGroup.metal
-                              ? 'rgb(0,51,102)'
-                              : 'white',
-                          }}
-                        />
-                      </Avatar>
-                      <Description
-                        sx={{ textAlign: 'center', fontWeight: '700' }}
-                      >
-                        Estruturas Metálicas
-                      </Description>
-                      <Fade in={isHoveredGroup.metal} timeout={500}>
-                        <Box sx={boxCssRules}>
-                          <DescriptionService text="Montagem, Desmontagem e desenvolvimento de projetos" />
-                        </Box>
-                      </Fade>
-                    </Stack>
-                  </Grid>
-                </Grid>
-              </Paper>
-            </Box>
-          </Grow>
-        </Grid>
-        <Grid item md={4} lg={2}>
-          <Grow
-            in={scrollPosition >= 700}
-            {...(scrollPosition >= 700 ? { timeout: 1400 } : {})}
-          >
-            <Box>
-              <Paper
-                elevation={paperElevation}
-                sx={paperCssRules}
-                onMouseEnter={() =>
-                  setIsHoveredGroup({ ...isHoveredGroup, welding: true })
-                }
-                onMouseLeave={() => setIsHoveredGroup(initialStateHover)}
-              >
-                <Grid
-                  container
-                  direction="column"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <Grid item xs={12}>
-                    <Stack alignItems="center" spacing={spaceItensPaper}>
-                      <Avatar
-                        sx={{
-                          ...avatarCssRules,
-                          bgcolor: isHoveredGroup.welding
-                            ? 'white'
-                            : 'rgb(0,51,102)',
-                        }}
-                      >
-                        <PrecisionManufacturing
-                          sx={{
-                            ...iconCssRules,
-                            color: isHoveredGroup.welding
-                              ? 'rgb(0,51,102)'
-                              : 'white',
-                          }}
-                        />
-                      </Avatar>
-                      <Description
-                        sx={{ textAlign: 'center', fontWeight: '700' }}
-                      >
-                        Soldagem
-                      </Description>
-                      <Fade in={isHoveredGroup.welding} timeout={500}>
-                        <Box sx={boxCssRules}>
-                          <DescriptionService text="Descrição: TIG, MIG, Eletrodo, Oxigás." />
-                        </Box>
-                      </Fade>
-                    </Stack>
-                  </Grid>
-                </Grid>
-              </Paper>
-            </Box>
-          </Grow>
-        </Grid>
-        <Grid item md={4} lg={2}>
-          <Grow
-            in={scrollPosition >= 700}
-            {...(scrollPosition >= 700 ? { timeout: 1400 } : {})}
-          >
-            <Box>
-              <Paper
-                elevation={paperElevation}
-                sx={{
-                  ...paperCssRules,
-                  height: isHoveredGroup.boiler ? '350px' : '230px',
-                  transition: 'height 0.5s ease-in-out',
-                }}
-                onMouseEnter={() =>
-                  setIsHoveredGroup({ ...isHoveredGroup, boiler: true })
-                }
-                onMouseLeave={() => setIsHoveredGroup(initialStateHover)}
-              >
-                <Grid
-                  container
-                  direction="column"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <Grid item xs={12}>
-                    <Stack alignItems="center" spacing={spaceItensPaper}>
-                      <Avatar
-                        sx={{
-                          ...avatarCssRules,
-                          bgcolor: isHoveredGroup.boiler
-                            ? 'white'
-                            : 'rgb(0,51,102)',
-                        }}
-                      >
-                        <LocalFireDepartment
-                          sx={{
-                            ...iconCssRules,
-                            color: isHoveredGroup.boiler
-                              ? 'rgb(0,51,102)'
-                              : 'white',
-                          }}
-                        />
-                      </Avatar>
-                      <Description
-                        sx={{ textAlign: 'center', fontWeight: '700' }}
-                      >
-                        Caldeiraria
-                      </Description>
-                      <Fade in={isHoveredGroup.boiler} timeout={500}>
-                        <Box sx={boxCssRules}>
-                          <DescriptionService text="Recortes, Montagens, Soldages, a projetos" />
-                        </Box>
-                      </Fade>
-                    </Stack>
-                  </Grid>
-                </Grid>
-              </Paper>
-            </Box>
-          </Grow>
-        </Grid>
-        <Grid item md={4} lg={2}>
-          <Grow
-            in={scrollPosition >= 700}
-            {...(scrollPosition >= 700 ? { timeout: 1400 } : {})}
-          >
-            <Box>
-              <Paper
-                elevation={paperElevation}
-                sx={paperCssRules}
-                onMouseEnter={() =>
-                  setIsHoveredGroup({ ...isHoveredGroup, labor: true })
-                }
-                onMouseLeave={() => setIsHoveredGroup(initialStateHover)}
-              >
-                <Grid
-                  container
-                  direction="column"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <Grid item xs={12}>
-                    <Stack alignItems="center" spacing={spaceItensPaper}>
-                      <Avatar
-                        sx={{
-                          ...avatarCssRules,
-                          bgcolor: isHoveredGroup.labor
-                            ? 'white'
-                            : 'rgb(0,51,102)',
-                        }}
-                      >
-                        <Construction
-                          sx={{
-                            ...iconCssRules,
-                            color: isHoveredGroup.labor
-                              ? 'rgb(0,51,102)'
-                              : 'white',
-                          }}
-                        />
-                      </Avatar>
-                      <Description
-                        sx={{ textAlign: 'center', fontWeight: '700' }}
-                      >
-                        Mão de obra Especializada
-                      </Description>
-                      <Fade in={isHoveredGroup.labor} timeout={500}>
-                        <Box sx={boxCssRules}>
-                          <DescriptionService text="Serviço fornecido no modelo Homem/Hora" />
-                        </Box>
-                      </Fade>
-                    </Stack>
-                  </Grid>
-                </Grid>
-              </Paper>
-            </Box>
-          </Grow>
-        </Grid>
-        <Grid item md={4} lg={2}>
-          <Grow
-            in={scrollPosition >= 700}
-            {...(scrollPosition >= 700 ? { timeout: 1400 } : {})}
-          >
-            <Box>
-              <Paper
-                elevation={paperElevation}
-                sx={{
-                  ...paperCssRules,
-                  height: isHoveredGroup.engineering ? '350px' : '230px',
-                  transition: 'height 0.5s ease-in-out',
-                }}
-                onMouseEnter={() =>
-                  setIsHoveredGroup({ ...isHoveredGroup, engineering: true })
-                }
-                onMouseLeave={() => setIsHoveredGroup(initialStateHover)}
-              >
-                <Grid
-                  container
-                  direction="column"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <Grid item xs={12}>
-                    <Stack alignItems="center" spacing={spaceItensPaper}>
-                      <Avatar
-                        sx={{
-                          ...avatarCssRules,
-                          bgcolor: isHoveredGroup.engineering
-                            ? 'white'
-                            : 'rgb(0,51,102)',
-                        }}
-                      >
-                        <Engineering
-                          sx={{
-                            ...iconCssRules,
-                            color: isHoveredGroup.engineering
-                              ? 'rgb(0,51,102)'
-                              : 'white',
-                          }}
-                        />
-                      </Avatar>
-                      <Description
-                        sx={{ textAlign: 'center', fontWeight: '700' }}
-                      >
-                        Projetos de Engenharia
-                      </Description>
-                      <Fade in={isHoveredGroup.engineering} timeout={500}>
-                        <Box sx={boxCssRules}>
-                          <DescriptionService
-                            text="Desenvolvimento de projetos de caldeiraria, montagens
-                    industriais e galpões"
-                          />
-                        </Box>
-                      </Fade>
-                    </Stack>
-                  </Grid>
-                </Grid>
-              </Paper>
-            </Box>
-          </Grow>
+                  <Description
+                    sx={{
+                      fontWeight: '700',
+                      textAlign: { xs: 'center', md: 'start' },
+                    }}
+                  >
+                    Filtros Rotativos
+                  </Description>
+                  <Description>
+                    <Collapse in={scrollPosition > 1000} timeout={1000}>
+                      <ul>
+                        {[
+                          'Fabricação',
+                          'Compra e Venda',
+                          'Montagem e Desmontagem',
+                          'Aferição',
+                          'Regulagens',
+                          'Testes em Campo',
+                          'Recuperação de ART',
+                          'Treinamentos',
+                        ].map((item, index) => (
+                          <li key={index} style={{ width: '275px' }}>
+                            <Box>{item.trim()}</Box>
+                          </li>
+                        ))}
+                      </ul>
+                    </Collapse>
+                  </Description>
+                </Stack>
+              </Grid>
+            </Grid>
+          </Paper>
         </Grid>
       </Grid>
     </>

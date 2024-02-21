@@ -108,8 +108,8 @@ const Partners = () => {
             src={citrosuco}
             sx={{
               ...cssLogos,
-              width: { xs: '60%', lg: '80%' },
-              height: { xs: '27%', sm: '50%', lg: '50%' },
+              width: { xs: '55%', lg: '80%' },
+              height: { xs: '23%', sm: '50%', lg: '50%' },
               marginTop: { xs: '60px', lg: '40px' },
             }}
           />
@@ -120,7 +120,7 @@ const Partners = () => {
             variant="square"
             src={furlan}
             sx={{
-              width: { xs: '60%', lg: '45%' },
+              width: { xs: '62%', lg: '45%' },
               height: { xs: '38%', sm: '50%', lg: '45%' },
               marginTop: { xs: '50px', lg: '40px' },
             }}
@@ -133,7 +133,7 @@ const Partners = () => {
             src={grupoFarias}
             sx={{
               width: { xs: '50%', lg: '50%' },
-              height: { xs: '100px', sm: '50%', lg: '140px' },
+              height: { xs: '95px', sm: '50%', lg: '140px' },
               marginTop: { xs: '25px' },
             }}
           />
@@ -181,8 +181,8 @@ const Partners = () => {
             variant="square"
             src={saoManoel}
             sx={{
-              width: { xs: '55%', lg: '65%' },
-              height: { xs: '55%', sm: '50%', lg: '100%' },
+              width: { xs: '53.5%', lg: '65%' },
+              height: { xs: '51%', sm: '50%', lg: '100%' },
               marginTop: { xs: '35px', lg: 0 },
             }}
           />
