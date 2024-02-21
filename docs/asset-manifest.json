@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/site-industria/static/css/main.3cc5eb70.css",
-    "main.js": "/site-industria/static/js/main.a7c19cda.js",
+    "main.js": "/site-industria/static/js/main.45c5d304.js",
     "static/media/industria.mp4": "/site-industria/static/media/industria.2072adf66c5380fce06d.mp4",
     "static/media/imgHeader.jpg": "/site-industria/static/media/imgHeader.8a6b080881aae55410c2.jpg",
     "static/media/usinaBandeirante.png": "/site-industria/static/media/usinaBandeirante.9c5dae045f10614f77d1.png",
@@ -51,10 +51,10 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "/site-industria/static/media/roboto-greek-ext-700-normal.9674bc0ae12c2551d9d1.woff2",
     "index.html": "/site-industria/index.html",
     "main.3cc5eb70.css.map": "/site-industria/static/css/main.3cc5eb70.css.map",
-    "main.a7c19cda.js.map": "/site-industria/static/js/main.a7c19cda.js.map"
+    "main.45c5d304.js.map": "/site-industria/static/js/main.45c5d304.js.map"
   },
   "entrypoints": [
     "static/css/main.3cc5eb70.css",
-    "static/js/main.a7c19cda.js"
+    "static/js/main.45c5d304.js"
   ]
 }
