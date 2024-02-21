@@ -8,7 +8,7 @@ import {
   SxProps,
   Theme,
 } from '@mui/material';
-import { Engineering, FilterAlt } from '@mui/icons-material';
+import { FilterAlt, LocalFireDepartment } from '@mui/icons-material';
 import Description from 'components/Description';
 import React, { useEffect, useState } from 'react';
 
@@ -66,7 +66,7 @@ const Services = () => {
                       ...avatarCssRules,
                     }}
                   >
-                    <Engineering
+                    <LocalFireDepartment
                       sx={{
                         ...iconCssRules,
                       }}
@@ -88,7 +88,7 @@ const Services = () => {
                       textAlign: { xs: 'center', md: 'start' },
                     }}
                   >
-                    Projetos de Engenharia
+                    Serviços de Caldeiraria
                   </Description>
                   <Description>
                     <Collapse in={scrollPosition > 1000} timeout={1000}>
