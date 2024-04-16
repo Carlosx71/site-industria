@@ -1,20 +1,9 @@
-import {
-  Avatar,
-  Box,
-  Collapse,
-  Grid,
-  Paper,
-  Stack,
-  SxProps,
-  Theme,
-} from '@mui/material';
+import { Avatar, Box, Grid, Paper, Stack, SxProps, Theme } from '@mui/material';
 import { Engineering, FilterAlt } from '@mui/icons-material';
 import Description from 'components/Description';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const Services = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
   const avatarCssRules: SxProps<Theme> = {
     height: '100px',
     width: '100px',
@@ -33,20 +22,6 @@ const Services = () => {
   };
 
   const paperElevation = 4;
-
-  const handleScroll = () => {
-    const position = window.scrollY;
-
-    setScrollPosition(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <>
@@ -91,27 +66,25 @@ const Services = () => {
                     Projetos de Engenharia
                   </Description>
                   <Description>
-                    <Collapse in={scrollPosition > 1000} timeout={1000}>
-                      <ul>
-                        {[
-                          'Caldeiraria',
-                          'Usinagem',
-                          'Soldagem (Eletrodo Revestido, TIG, MIG/MAG, Arame Tubular, Arco Submerso) Jateamento',
-                          'Pintura Industrial',
-                          'Montagem Industrial',
-                          'Manutenção Industrial',
-                          'Assistência Técnica',
-                          'Testes em Campo',
-                          'Treinamentos.',
-                        ].map((item, index) => {
-                          return (
-                            <li key={index}>
-                              <Box>{item.trim()}</Box>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </Collapse>
+                    <ul>
+                      {[
+                        'Caldeiraria',
+                        'Usinagem',
+                        'Soldagem (Eletrodo Revestido, TIG, MIG/MAG, Arame Tubular, Arco Submerso) Jateamento',
+                        'Pintura Industrial',
+                        'Montagem Industrial',
+                        'Manutenção Industrial',
+                        'Assistência Técnica',
+                        'Testes em Campo',
+                        'Treinamentos.',
+                      ].map((item, index) => {
+                        return (
+                          <li key={index}>
+                            <Box>{item.trim()}</Box>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </Description>
                 </Stack>
               </Grid>
@@ -161,24 +134,22 @@ const Services = () => {
                     Filtros Rotativos
                   </Description>
                   <Description>
-                    <Collapse in={scrollPosition > 1000} timeout={1000}>
-                      <ul>
-                        {[
-                          'Fabricação',
-                          'Compra e Venda',
-                          'Montagem e Desmontagem',
-                          'Aferição',
-                          'Regulagens',
-                          'Testes em Campo',
-                          'Recuperação de ART',
-                          'Treinamentos',
-                        ].map((item, index) => (
-                          <li key={index} style={{ width: '275px' }}>
-                            <Box>{item.trim()}</Box>
-                          </li>
-                        ))}
-                      </ul>
-                    </Collapse>
+                    <ul>
+                      {[
+                        'Fabricação',
+                        'Compra e Venda',
+                        'Montagem e Desmontagem',
+                        'Aferição',
+                        'Regulagens',
+                        'Testes em Campo',
+                        'Recuperação de ART',
+                        'Treinamentos',
+                      ].map((item, index) => (
+                        <li key={index} style={{ width: '275px' }}>
+                          <Box>{item.trim()}</Box>
+                        </li>
+                      ))}
+                    </ul>
                   </Description>
                 </Stack>
               </Grid>
