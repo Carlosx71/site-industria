@@ -5,9 +5,9 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { ThemeProvider } from '@mui/material/styles';
 import { Container, Grid } from '@mui/material';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import ptBR from 'date-fns/locale/pt-BR';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import dayjs from 'dayjs';
 import theme from 'styles/theme/light';
 import Layout from 'components/Layout';
 import ImgHeader from 'components/ImgHeader';
@@ -23,7 +23,10 @@ import Contact from 'components/Contact';
 const spacing = 5;
 const App = () => {
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns} locale={ptBR}>
+    <LocalizationProvider
+      dateAdapter={AdapterDayjs}
+      adapterLocale={dayjs.locale('pt-br')}
+    >
       <ThemeProvider theme={theme}>
         <Layout />
         <Grid container spacing={spacing}>

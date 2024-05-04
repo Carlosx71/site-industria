@@ -23,11 +23,6 @@ const pages = [
   { title: 'Serviços', anchor: 'services' },
   { title: 'Propósito', anchor: 'purpose' },
   { title: 'Parceiros', anchor: 'partners' },
-  {
-    title: 'Trabalhe conosco',
-    anchor: undefined,
-    link: 'http://oliverservicos.com/trabalheconosco',
-  },
   { title: 'Contato', anchor: 'contact' },
 ];
 
@@ -120,28 +115,19 @@ const ResponsiveAppBar = () => {
                       display: { xs: 'block', md: 'none' },
                     }}
                   >
-                    {pages.map(({ title, anchor, link }) => {
-                      const target =
-                        anchor !== undefined ? undefined : '_blank';
-                      return (
-                        <MenuItem
-                          key={title}
-                          onClick={handleCloseNavMenu}
-                          href={`#${title}`}
-                        >
-                          <Typography textAlign="center">
-                            <Link
-                              href={anchor ? `#${anchor}` : link}
-                              underline="none"
-                              rel="noopener"
-                              target={target}
-                            >
-                              <div className={classes.linkText}>{title}</div>
-                            </Link>
-                          </Typography>
-                        </MenuItem>
-                      );
-                    })}
+                    {pages.map(({ title, anchor }) => (
+                      <MenuItem
+                        key={title}
+                        onClick={handleCloseNavMenu}
+                        href={`#${title}`}
+                      >
+                        <Typography textAlign="center">
+                          <Link href={`#${anchor}`} className={classes.link}>
+                            <div className={classes.linkText}>{title}</div>
+                          </Link>
+                        </Typography>
+                      </MenuItem>
+                    ))}
                   </Menu>
                 </Box>
               </Stack>
@@ -165,23 +151,21 @@ const ResponsiveAppBar = () => {
                 />
 
                 <Box display="flex">
-                  {pages.map(({ anchor, title, link }) => {
-                    return (
-                      <Button
-                        key={title}
-                        onClick={handleCloseNavMenu}
-                        sx={{
-                          my: 2,
-                          bgcolor: '#fff',
-                          color: 'rgb(0, 51, 102)',
-                          fontWeight: 'bold',
-                        }}
-                        href={anchor ? `#${anchor}` : link}
-                      >
-                        {title}
-                      </Button>
-                    );
-                  })}
+                  {pages.map(({ anchor, title }) => (
+                    <Button
+                      key={title}
+                      onClick={handleCloseNavMenu}
+                      sx={{
+                        my: 2,
+                        bgcolor: '#fff',
+                        color: 'rgb(0, 51, 102)',
+                        fontWeight: 'bold',
+                      }}
+                      href={`#${anchor}`}
+                    >
+                      {title}
+                    </Button>
+                  ))}
                 </Box>
               </Stack>
             </Hidden>
