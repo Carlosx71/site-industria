@@ -19,11 +19,12 @@ import logotipo from 'assets/images/logotipoLight.png';
 import useStyles from './styles';
 
 const pages = [
-  { title: 'Quem Somos', anchor: 'aboutCompany' },
-  { title: 'Serviços', anchor: 'services' },
-  { title: 'Propósito', anchor: 'purpose' },
-  { title: 'Parceiros', anchor: 'partners' },
-  { title: 'Contato', anchor: 'contact' },
+  { title: 'Quem Somos', anchor: '#aboutCompany' },
+  { title: 'Serviços', anchor: '#services' },
+  { title: 'Propósito', anchor: '#purpose' },
+  { title: 'Parceiros', anchor: '#partners' },
+  { title: 'Contato', anchor: '#contact' },
+  { title: 'Trabalhe Conosco', anchor: '/trabalheconosco' },
 ];
 
 const ResponsiveAppBar = () => {
@@ -122,7 +123,7 @@ const ResponsiveAppBar = () => {
                         href={`#${title}`}
                       >
                         <Typography textAlign="center">
-                          <Link href={`#${anchor}`} className={classes.link}>
+                          <Link href={`${anchor}`} className={classes.link}>
                             <div className={classes.linkText}>{title}</div>
                           </Link>
                         </Typography>
@@ -161,7 +162,7 @@ const ResponsiveAppBar = () => {
                         color: 'rgb(0, 51, 102)',
                         fontWeight: 'bold',
                       }}
-                      href={`#${anchor}`}
+                      href={`${anchor}`}
                     >
                       {title}
                     </Button>
